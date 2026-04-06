@@ -129,5 +129,114 @@ footer a:hover {
   .navbar-brand {
     font-size: 0.95rem;
   }
+}/* ---------- PHOTOS FLOTTANTES PAGE PROJET ---------- */
+.content.with-floating-photos {
+  position: relative;
+  overflow: visible;
 }
 
+/* Chaque bloc de texte qui recevra une photo */
+.photo-section {
+  position: relative;
+  margin: 80px 0;
+  min-height: 260px;
+}
+
+/* Style général des photos */
+.side-photo {
+  position: absolute;
+  width: 260px;
+  max-width: 28vw;
+  border-radius: 14px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.22);
+  object-fit: cover;
+  border: 4px solid white;
+  z-index: 2;
+}
+
+/* Photo à gauche */
+.photo-left {
+  left: -170px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-4deg);
+}
+
+/* Photo à droite */
+.photo-right {
+  right: -170px;
+  top: 50%;
+  transform: translateY(-50%) rotate(4deg);
+}
+
+/* Pour que le texte passe bien devant ou autour */
+.photo-section h1,
+.photo-section h2,
+.photo-section p,
+.photo-section ul,
+.photo-section ol {
+  position: relative;
+  z-index: 1;
+}
+
+/* Un peu plus d'air quand une photo est présente */
+.photo-section.photo-has-left {
+  padding-left: 40px;
+}
+
+.photo-section.photo-has-right {
+  padding-right: 40px;
+}
+
+/* ---------- RESPONSIVE PHOTOS ---------- */
+@media (max-width: 1200px) {
+  .side-photo {
+    width: 220px;
+  }
+
+  .photo-left {
+    left: -130px;
+  }
+
+  .photo-right {
+    right: -130px;
+  }
+}
+
+@media (max-width: 992px) {
+  .side-photo {
+    width: 180px;
+  }
+
+  .photo-left {
+    left: -90px;
+  }
+
+  .photo-right {
+    right: -90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .photo-section {
+    margin: 50px 0;
+    min-height: auto;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .side-photo {
+    position: static;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 25px auto;
+    transform: none !important;
+  }
+
+  .photo-left,
+  .photo-right {
+    left: auto;
+    right: auto;
+    top: auto;
+  }
+}
