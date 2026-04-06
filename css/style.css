@@ -144,27 +144,34 @@ footer a:hover {
 
 /* Style général des photos */
 .side-photo {
-  position: absolute;
   width: 260px;
-  max-width: 28vw;
+  max-width: 100%; /* Sécurité pour le mobile */
   border-radius: 14px;
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.22);
   object-fit: cover;
   border: 4px solid white;
-  z-index: 2;
+  margin-bottom: 20px; /* Espace sous l'image en mobile */
 }
 
-/* Photo à gauche */
+/* Photo à gauche : on la fait flotter à gauche */
 .photo-left {
-  left: -170px;
-  top: 70px;
+  float: left;
+  margin-right: 25px;
   transform: rotate(-4deg);
 }
 
+/* Photo à droite : on la fait flotter à droite */
 .photo-right {
-  right: -170px;
-  top: 70px;
+  float: right;
+  margin-left: 25px;
   transform: rotate(4deg);
+}
+
+/* IMPORTANT : On force le parent à contenir les éléments flottants */
+.photo-section::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Pour que le texte passe bien devant ou autour */
