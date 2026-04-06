@@ -157,15 +157,14 @@ footer a:hover {
 /* Photo à gauche */
 .photo-left {
   left: -170px;
-  top: 50%;
-  transform: translateY(-50%) rotate(-4deg);
+  top: 70px;
+  transform: rotate(-4deg);
 }
 
-/* Photo à droite */
 .photo-right {
   right: -170px;
-  top: 50%;
-  transform: translateY(-50%) rotate(4deg);
+  top: 70px;
+  transform: rotate(4deg);
 }
 
 /* Pour que le texte passe bien devant ou autour */
