@@ -1,20 +1,11 @@
 {
-  "name": "Crabe des Scènes",
-  "short_name": "Crabe des Scènes",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#fafafa",
-  "theme_color": "#333333",
-  "icons": [
-    {
-      "src": "/assets/icons/crabe-des-scenes-192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/assets/icons/crabe-des-scenes-512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+"name": "Crabe des Scènes",
+"short_name": "Crabe",
+"icons": [
+{"src": "/android-chrome-192x192.png","sizes": "192x192","type": "image/png"},
+{"src": "/android-chrome-512x512.png","sizes": "512x512","type": "image/png"}
+],
+"theme_color": "#000000",
+"background_color": "#ffffff",
+"display": "standalone"
 }
