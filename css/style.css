@@ -110,7 +110,8 @@ footer a:hover {
 
   .content {
     margin-top: 10px;
-  }
+    background-color: #FBDA01; 
+}
 
   footer {
     font-size: 0.9rem;
