@@ -49,6 +49,10 @@ h1 {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   text-align: justify;
 }
+.music-hall-info {
+    background-color: #FBDA01;
+    padding: 2rem; /* optionnel : ajoute de l'espace autour du texte */
+}
 
 /* ---------- FOOTER ---------- */
 footer {
