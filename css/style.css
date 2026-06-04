@@ -167,6 +167,13 @@ footer a:hover {
   transform: rotate(4deg);
 }
 
+/* Photo à droite : on la fait flotter à droite */
+.photo-center {
+  float: center;
+  margin-left: 25px;
+  transform: rotate(4deg);
+}
+
 /* IMPORTANT : On force le parent à contenir les éléments flottants */
 .photo-section::after {
   content: "";
