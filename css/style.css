@@ -41,16 +41,21 @@ h1 {
 .content {
   max-width: 900px;
   margin: 0 auto 40px auto;
+  background-color: white; 
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  text-align: justify;
+}
+.content-page1 {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
   background-color: #FBDA01; 
 /*  background-color: white; */ 
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   text-align: justify;
-}
-.music-hall-info {
-    background-color: #FBDA01;
-    padding: 2rem; /* optionnel : ajoute de l'espace autour du texte */
 }
 
 /* ---------- FOOTER ---------- */
