@@ -1,12 +1,13 @@
 /* ---------- STYLE GLOBAL ---------- */
+/*  font-family: "American Typewriter", Courier, monospace, serif;
+  font-family: "Times New Roman", Times, serif; */
+
 html, body {
   height: 100%;
 }
 
 body {
   font-family: "Courier Prime", "American Typewriter", Courier, monospace !important;
-/*  font-family: "American Typewriter", Courier, monospace, serif;
-  font-family: "Times New Roman", Times, serif; */
   background-color: #fafafa;
   color: #222;
   padding-top: 80px;
