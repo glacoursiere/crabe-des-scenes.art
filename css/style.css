@@ -4,7 +4,8 @@ html, body {
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'American Typewriter', Courier, monospace, serif;
+/*  font-family: "Times New Roman", Times, serif; */
   background-color: #fafafa;
   color: #222;
   padding-top: 80px;
