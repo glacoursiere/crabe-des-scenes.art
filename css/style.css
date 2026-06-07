@@ -196,12 +196,6 @@ footer a:hover {
 }
 
 /* Photo à droite : on la fait flotter au centre */
-.photo-center {
-  float: center;
-  margin-left: auto;
-  margin-right: auto;
-  transform: rotate(2deg);
-}
 
 /* IMPORTANT : On force le parent à contenir les éléments flottants */
 .photo-section::after {
@@ -243,9 +237,6 @@ footer a:hover {
     right: -130px;
   }
 
-  .photo-center {
-    right: -130px;
-  }
 }
 
 @media (max-width: 992px) {
@@ -261,10 +252,7 @@ footer a:hover {
     right: -90px;
   }
   
-  .photo-center {
-    right: -90px;
-  }
-}
+
 
 @media (max-width: 768px) {
   .photo-section {
