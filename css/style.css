@@ -57,6 +57,19 @@ h1 {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
   text-align: justify;
 }
+.content-page1-new {
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  background-color: #FBDA01;
+  padding: 30px;
+
+  outline: 6px solid white;
+  outline-offset: 10px;
+
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  text-align: justify;
+}
 
 /* ---------- FOOTER ---------- */
 footer {
