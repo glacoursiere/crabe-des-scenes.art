@@ -43,6 +43,7 @@ h1 {
 
 /* ---------- CONTENU PRINCIPAL ---------- */
 .content {
+  font-family: "Courier Prime", "American Typewriter", Courier, monospace !important;
   max-width: 900px;
   margin: 0 auto 40px auto;
   background-color: white; 
@@ -52,6 +53,7 @@ h1 {
   text-align: justify;
 }
 .content-page1 {
+  font-family: "Courier Prime", "American Typewriter", Courier, monospace !important;
   max-width: 900px;
   margin: 0 auto 40px auto;
   background-color: #FBDA01; 
@@ -62,6 +64,7 @@ h1 {
   text-align: justify;
 }
 .content-page1-new {
+  font-family: "Courier Prime", "American Typewriter", Courier, monospace !important;
   max-width: 900px;
   margin: 0 auto 40px auto;
   background-color: #fafafa;
@@ -86,6 +89,7 @@ footer {
 }
 
 footer a {
+  font-family: "Courier Prime", "American Typewriter", Courier, monospace !important;
   color: #ff4d4d;
   text-decoration: none;
   font-weight: bold;
