@@ -292,3 +292,19 @@ footer a:hover {
     top: auto;
   }
 }
+
+.ruche-banner {
+  background: #f2c300;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.ruche-banner a {
+  color: black;
+  margin-left: 10px;
+}
