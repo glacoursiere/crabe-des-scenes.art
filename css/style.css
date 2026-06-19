@@ -27,6 +27,23 @@ h1 {
   font-weight: bold;
 }
 
+/* bannière pour la campagne de socio financement */
+.ruche-banner {
+  background: #f2c300;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.ruche-banner a {
+  color: black;
+  margin-left: 10px;
+}
+
 /* ---------- NAVBAR ---------- */
 .navbar {
   background-color: #333;
@@ -293,18 +310,4 @@ footer a:hover {
   }
 }
 
-.ruche-banner {
-  background: #f2c300;
-  color: black;
-  text-align: center;
-  padding: 12px;
-  font-weight: bold;
-  position: sticky;
-  top: 0;
-  z-index: 9999;
-}
 
-.ruche-banner a {
-  color: black;
-  margin-left: 10px;
-}
