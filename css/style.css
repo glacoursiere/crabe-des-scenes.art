@@ -36,7 +36,7 @@ h1 {
   font-weight: bold;
   position: sticky;
   top: 0;
-  z-index: 9999;
+  z-index: 1000;
 }
 
 .ruche-banner a {
