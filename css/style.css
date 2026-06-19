@@ -34,7 +34,7 @@ h1 {
   text-align: center;
   padding: 12px;
   font-weight: bold;
-  position: relative;
+  position: static;
   top: 0;
   z-index: 1000;
 }
