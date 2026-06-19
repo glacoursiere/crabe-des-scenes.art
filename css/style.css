@@ -47,7 +47,8 @@ h1 {
 /* ---------- NAVBAR ---------- */
 .navbar {
   background-color: #333;
-   z-index: 1100;
+   z-index: 9999;
+  position: fixed
 }
 
 .navbar-brand, .nav-link {
