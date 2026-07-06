@@ -265,6 +265,16 @@ footer a:hover {
   padding-right: 10px;
 }
 
+.photo-section.photo-has-left.partenaire-PP {
+  padding-left: 10px;
+  width: 10%; 
+  height: auto;
+}
+
+.photo-section.photo-has-right.partenaire-PG {
+  padding-right: 10px;
+}
+
 /* ---------- RESPONSIVE PHOTOS ---------- */
 @media (max-width: 1200px) {
   .side-photo {
