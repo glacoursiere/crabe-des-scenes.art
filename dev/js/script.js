@@ -73,34 +73,39 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })();
 
-/* Orienter chaque projecteur vers le point de fuite du plancher de scène. */
+/* Orienter les projecteurs de chaque page vers le point de fuite de la scène. */
 (() => {
-  const stage = document.querySelector(".hero-stage");
-  const floor = stage?.querySelector(".stage-floor");
-  const projectors = [...(stage?.querySelectorAll(".footlights span") || [])];
+  const stages = [...document.querySelectorAll(".hero-stage, .page-hero")];
 
-  if (!stage || !floor || !projectors.length) return;
+  if (!stages.length) return;
 
   /* L'axe optique de l'image source est incliné d'environ 49 degrés. */
   const PROJECTOR_IMAGE_AXIS_OFFSET = 49;
 
   const aimProjectors = () => {
-    const stageRect = stage.getBoundingClientRect();
-    const floorRect = floor.getBoundingClientRect();
-    const targetX = stageRect.left + stageRect.width / 2;
-    const targetY = floorRect.top;
+    stages.forEach(stage => {
+      const projectors = [...stage.querySelectorAll(".footlights span")];
+      if (!projectors.length) return;
 
-    projectors.forEach(projector => {
-      const rect = projector.getBoundingClientRect();
-      const sourceX = rect.left + rect.width / 2;
-      const sourceY = rect.top + rect.height * .28;
-      const angle = Math.atan2(targetX - sourceX, sourceY - targetY) * 180 / Math.PI;
-      const mirror = sourceX > targetX ? -1 : 1;
-      const fixtureAngle = angle - PROJECTOR_IMAGE_AXIS_OFFSET * mirror;
+      const floor = stage.querySelector(".stage-floor");
+      const stageRect = stage.getBoundingClientRect();
+      const floorRect = floor?.getBoundingClientRect();
+      const targetX = stageRect.left + stageRect.width / 2;
+      const targetY = floorRect?.top ?? stageRect.top + stageRect.height * .66;
 
-      projector.style.setProperty("--projector-angle", `${angle.toFixed(2)}deg`);
-      projector.style.setProperty("--projector-fixture-angle", `${fixtureAngle.toFixed(2)}deg`);
-      projector.style.setProperty("--projector-mirror", String(mirror));
+      projectors.forEach(projector => {
+        const rect = projector.getBoundingClientRect();
+        /* Coordonnées de la lentille dans l'image source du projecteur. */
+        const sourceX = rect.left + rect.width * .8;
+        const sourceY = rect.top + rect.height * .22;
+        const angle = Math.atan2(targetX - sourceX, sourceY - targetY) * 180 / Math.PI;
+        const mirror = sourceX > targetX ? -1 : 1;
+        const fixtureAngle = angle - PROJECTOR_IMAGE_AXIS_OFFSET * mirror;
+
+        projector.style.setProperty("--projector-angle", `${angle.toFixed(2)}deg`);
+        projector.style.setProperty("--projector-fixture-angle", `${fixtureAngle.toFixed(2)}deg`);
+        projector.style.setProperty("--projector-mirror", String(mirror));
+      });
     });
   };
 
@@ -144,7 +149,7 @@ const CAMPAIGN_END_DATE = new Date("2026-08-10T23:59:59-04:00");
       <button class="campaign-close" type="button" aria-label="Fermer le panneau de sociofinancement">×</button>
       <p class="eyebrow">Campagne de sociofinancement</p>
       <h2 id="campaign-title">Aidez-nous à faire vivre Piratage<span class="piratages-s">s</span></h2>
-      <p>Votre contribution soutient directement la création, la production et la présentation de Piratage<span class="piratages-s">s</span> à l'Auberge Mowatt les 21 et 22 août prochain.</p>
+      <p>Votre contribution soutient directement la création et la production de Piratage<span class="piratages-s">s</span> à l'Auberge Mowatt les 21 et 22 août prochain.</p>
       <a class="button campaign-button" href="https://laruchequebec.com/fr/projets/piratages-1" target="_blank" rel="noopener noreferrer">Contribuer sur La Ruche</a>
     </aside>`;
 
