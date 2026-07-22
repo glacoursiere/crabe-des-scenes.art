@@ -737,8 +737,10 @@ body {
 .home-section-ornament + .partners-section { padding-top: clamp(2.75rem, 4vw, 3.75rem); }
 
 .manifesto {
-  background: var(--cream);
-  color: #1b1512;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(107, 23, 36, .18), transparent 38%),
+    var(--panel);
+  color: var(--cream);
 }
 
 .center-text { text-align: center; }
@@ -748,18 +750,23 @@ body {
   grid-template-columns: repeat(3,1fr);
   gap: 1px;
   margin-top: 3rem;
-  background: rgba(35,24,18,.18);
+  background: rgba(200, 163, 90, .2);
 }
 
 .manifesto-item {
   padding: clamp(2rem,5vw,4rem);
-  background: var(--cream);
+  background: #0b0909;
+  color: var(--cream);
 }
 
 .manifesto-item > span {
-  color: var(--wine);
+  color: var(--gold);
   font-size: .72rem;
   letter-spacing: .2em;
+}
+
+.manifesto-item p {
+  color: var(--muted);
 }
 
 .manifesto-item h2 {
