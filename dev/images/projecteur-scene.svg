@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title">
+  <title id="title">Projecteur de scène</title>
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6f5a39"/>
+      <stop offset="0.48" stop-color="#211b17"/>
+      <stop offset="1" stop-color="#090807"/>
+    </linearGradient>
+    <radialGradient id="lamp" cx="42%" cy="38%" r="62%">
+      <stop offset="0" stop-color="#d6d0c4"/>
+      <stop offset="0.42" stop-color="#77716a"/>
+      <stop offset="1" stop-color="#171514"/>
+    </radialGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <path d="M26 27h39l12 12v25L65 76H26L14 64V39z" fill="url(#body)" stroke="#c8a35a" stroke-width="2"/>
+  <circle cx="29" cy="51" r="14" fill="url(#lamp)" stroke="#9b8a6a" stroke-width="2"/>
+  <path d="M69 36h12v30H69" fill="#15110e" stroke="#8e7040" stroke-width="2"/>
+  <path d="M38 76v8M26 85h39" fill="none" stroke="#c8a35a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M38 30l8-12h18l8 12" fill="none" stroke="#8e7040" stroke-width="3" stroke-linejoin="round"/>
+</svg>
