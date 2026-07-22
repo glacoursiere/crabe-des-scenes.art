@@ -1912,14 +1912,14 @@ body.campaign-open { overflow: hidden; }
 .improv-photo {
   display: block;
   object-fit: cover;
-  border: 5px solid #f3eadb;
+  border: 2px solid rgba(243, 234, 219, .88);
   box-shadow: 0 22px 50px rgba(0, 0, 0, .68);
   transition: transform .35s ease, filter .35s ease;
 }
 
 .improv-photo-main {
   grid-column: 1 / -1;
-  width: 92%;
+  width: 100%;
   height: auto;
   aspect-ratio: 3 / 2;
   margin: 0 auto;
@@ -1932,11 +1932,12 @@ body.campaign-open { overflow: hidden; }
 .improv-photo-secondary {
   position: relative;
   bottom: auto;
-  width: 100%;
+  width: 90%;
   height: auto;
   aspect-ratio: 3 / 2;
   object-fit: contain;
   background: #090808;
+  justify-self: center;
 }
 
 .improv-photo-left {
@@ -2001,13 +2002,13 @@ body.campaign-open { overflow: hidden; }
   }
 
   .improv-photo-main {
-    width: 92%;
+    width: 100%;
     height: auto;
     margin-top: 0;
   }
 
   .improv-photo-secondary {
-    width: 100%;
+    width: 90%;
     height: auto;
     bottom: auto;
   }
@@ -2037,7 +2038,14 @@ body.campaign-open { overflow: hidden; }
   .improv-photo-main,
   .improv-photo-secondary {
     grid-column: 1;
-    width: 94%;
     justify-self: center;
+  }
+
+  .improv-photo-main {
+    width: 100%;
+  }
+
+  .improv-photo-secondary {
+    width: 92%;
   }
 }
