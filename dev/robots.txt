@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://crabe-des-scenes.art/sitemap.xml
