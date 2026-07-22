@@ -1926,7 +1926,7 @@ body.campaign-open { overflow: hidden; }
 .improv-photo {
   display: block;
   object-fit: cover;
-  border: 2px solid rgba(243, 234, 219, .88);
+  border: 0;
   box-shadow: 0 22px 50px rgba(0, 0, 0, .68);
   transition: transform .35s ease, filter .35s ease;
 }
