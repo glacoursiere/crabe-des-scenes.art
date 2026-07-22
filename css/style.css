@@ -1899,8 +1899,12 @@ body.campaign-open { overflow: hidden; }
 
 .improv-gallery {
   position: relative;
-  min-height: clamp(560px, 62vw, 760px);
-  display: block;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(.8rem, 2vw, 1.4rem);
+  align-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
   overflow: hidden;
   background: #090808;
 }
@@ -1914,29 +1918,34 @@ body.campaign-open { overflow: hidden; }
 }
 
 .improv-photo-main {
-  width: 88%;
-  height: 68%;
-  margin: 6% auto 0;
-  object-position: center 62%;
+  grid-column: 1 / -1;
+  width: 92%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: center;
+  justify-self: center;
   transform: rotate(-1deg);
 }
 
 .improv-photo-secondary {
-  position: absolute;
-  bottom: 5%;
-  width: 47%;
-  height: 31%;
+  position: relative;
+  bottom: auto;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
   object-fit: contain;
   background: #090808;
 }
 
 .improv-photo-left {
-  left: 3%;
+  left: auto;
   transform: rotate(-6deg);
 }
 
 .improv-photo-right {
-  right: 3%;
+  right: auto;
   transform: rotate(5deg);
 }
 
@@ -1988,33 +1997,47 @@ body.campaign-open { overflow: hidden; }
   }
 
   .improv-gallery {
-    min-height: 520px;
+    min-height: 0;
   }
 
   .improv-photo-main {
     width: 92%;
-    height: 64%;
-    margin-top: 5%;
+    height: auto;
+    margin-top: 0;
   }
 
   .improv-photo-secondary {
-    width: 49%;
-    height: 32%;
-    bottom: 4%;
+    width: 100%;
+    height: auto;
+    bottom: auto;
   }
 
   .improv-photo-left {
-    left: 2%;
+    left: auto;
     transform: rotate(-3deg);
   }
 
   .improv-photo-right {
-    right: 2%;
+    right: auto;
     transform: rotate(3deg);
   }
 
   .improv-copy h2 {
     font-size: clamp(1.1rem, 5vw, 2.45rem);
     letter-spacing: -.025em;
+  }
+}
+
+@media (max-width: 480px) {
+  .improv-gallery {
+    grid-template-columns: 1fr;
+    padding: 1.1rem;
+  }
+
+  .improv-photo-main,
+  .improv-photo-secondary {
+    grid-column: 1;
+    width: 94%;
+    justify-self: center;
   }
 }
