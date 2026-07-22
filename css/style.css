@@ -1,4 +1,4 @@
-﻿:root{--bg:#080707;--panel:#171414;--cream:#f2ede4;--muted:#c5bdb2;--gold:#c8a35a;--wine:#68131e;--max:1180px;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Inter",Arial,sans-serif}
+:root{--bg:#080707;--panel:#171414;--cream:#f2ede4;--muted:#c5bdb2;--gold:#c8a35a;--wine:#68131e;--max:1180px;--serif:"Cormorant Garamond",Georgia,serif;--sans:"Inter",Arial,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:var(--sans);line-height:1.7}a{color:inherit}.container{width:min(92%,var(--max));margin:auto}
 .site-header{position:fixed;inset:0 0 auto;z-index:1000;padding:1rem 0;background:linear-gradient(rgba(0,0,0,.85),transparent);transition:.3s}.site-header.scrolled{background:rgba(8,7,7,.96);box-shadow:0 8px 30px #0008}.header-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem}
 .brand{display:flex;align-items:center;gap:.8rem;text-decoration:none}.brand-logo{width:55px;height:55px;object-fit:contain}.brand span{display:grid}.brand strong{font-family:var(--serif);letter-spacing:.12em;font-size:1.3rem}.brand small{color:var(--gold);letter-spacing:.18em;text-transform:uppercase;font-size:.62rem}
@@ -1796,3 +1796,109 @@ body.campaign-open { overflow: hidden; }
   transform: none;
 }
 
+
+/* =========================================================
+   LIVRAISON RC37 — SCÈNE CHALEUREUSE SANS RIDEAUX
+   ========================================================= */
+.hero-stage,
+.page-hero {
+  isolation: isolate;
+  background-color: #030201 !important;
+  background-image:
+    linear-gradient(180deg, rgba(0,0,0,.08) 0%, rgba(0,0,0,.02) 58%, rgba(0,0,0,.12) 100%),
+    url("../images/scene-theatre-chaleureuse-large.webp") !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background-size: cover !important;
+}
+
+.page-hero {
+  min-height: clamp(520px, 72vh, 760px);
+  padding: clamp(8rem, 15vh, 11rem) 0 clamp(8rem, 17vh, 12rem) !important;
+}
+
+.hero-stage::before,
+.page-hero::before,
+.page-hero::after,
+.page-hero .page-hero-content::before,
+.page-hero .page-hero-content::after {
+  display: none !important;
+  content: none !important;
+}
+
+.hero-stage > .proscenium,
+.hero-stage > .stage-valance,
+.hero-stage > .curtain,
+.hero-stage > .curtain-fold,
+.hero-stage > .spotlight,
+.hero-stage > .stage-haze,
+.hero-stage > .stage-floor,
+.hero-stage > .footlights,
+.page-hero > .stage-valance,
+.page-hero > .page-beam,
+.page-hero > .footlights {
+  display: none !important;
+}
+
+.hero-stage .hero-content {
+  z-index: 4;
+  padding-top: clamp(5rem, 10vh, 7rem);
+  padding-bottom: clamp(10rem, 21vh, 15rem);
+}
+
+.hero-stage .hero-logo,
+.page-hero-content {
+  filter: drop-shadow(0 12px 28px rgba(0,0,0,.9));
+}
+
+@media (max-width: 700px), (orientation: portrait) and (max-width: 1000px) {
+  .hero-stage,
+  .page-hero {
+    background-image:
+      linear-gradient(180deg, rgba(0,0,0,.07) 0%, rgba(0,0,0,.01) 62%, rgba(0,0,0,.12) 100%),
+      url("../images/scene-theatre-chaleureuse-mobile.webp") !important;
+    background-position: center center !important;
+  }
+
+  .page-hero {
+    min-height: min(82svh, 760px);
+    padding: 8rem 0 10rem !important;
+  }
+
+  .hero-stage .hero-content {
+    padding-top: 5.5rem;
+    padding-bottom: 13rem;
+  }
+}
+
+/* =========================================================
+   LIVRAISON RC38 — ESPACEMENT ET PANNEAU DE CAMPAGNE
+   ========================================================= */
+.hero-stage {
+  min-height: clamp(620px, 88svh, 850px);
+}
+
+.page-hero {
+  min-height: clamp(470px, 62vh, 660px);
+  padding-bottom: clamp(4rem, 8vh, 6rem) !important;
+}
+
+.campaign-panel h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1;
+}
+
+.campaign-panel h2 .piratages-s {
+  color: var(--piratages-yellow);
+}
+
+@media (max-width: 700px), (orientation: portrait) and (max-width: 1000px) {
+  .hero-stage {
+    min-height: min(78svh, 720px);
+  }
+
+  .page-hero {
+    min-height: min(72svh, 660px);
+    padding-bottom: 7rem !important;
+  }
+}
