@@ -1897,6 +1897,20 @@ body.campaign-open { overflow: hidden; }
   margin-top: clamp(3rem, 7vw, 6rem);
 }
 
+@media (min-width: 901px) {
+  .improv-show-card {
+    grid-template-columns: minmax(0, 1.42fr) minmax(310px, .58fr);
+  }
+
+  .improv-copy {
+    padding: clamp(1.75rem, 3vw, 3.25rem);
+  }
+
+  .improv-show-card .improv-copy h2 {
+    font-size: clamp(1.55rem, 2.4vw, 2.7rem);
+  }
+}
+
 .improv-gallery {
   position: relative;
   min-height: 0;
