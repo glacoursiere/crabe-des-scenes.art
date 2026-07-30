@@ -869,9 +869,10 @@ body {
 .atelier-video__title {
   margin: 0 0 1rem;
   color: var(--cream);
-  font-size: clamp(1.2rem, 2.4vw, 1.65rem);
+  font-size: clamp(.7rem, 2.4vw, 1.65rem);
   line-height: 1.2;
   text-align: center;
+  white-space: nowrap;
 }
 
 .atelier-video__frame {
