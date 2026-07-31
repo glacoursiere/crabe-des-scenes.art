@@ -12,9 +12,10 @@
 .atelier-video__title {
   margin: 0 0 1rem;
   color: #f6efe4;
-  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+  font-size: clamp(.78rem, 2.2vw, 1.55rem);
   line-height: 1.25;
   text-align: center;
+  white-space: nowrap;
 }
 
 .atelier-video__frame {
