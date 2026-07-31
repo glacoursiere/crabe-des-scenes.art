@@ -1,0 +1,44 @@
+/* Vidéo de la page Ateliers — ajout isolé du 31 juillet 2026 */
+
+.workshop-media {
+  min-width: 0;
+}
+
+.atelier-video {
+  width: 100%;
+  margin-top: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.atelier-video__title {
+  margin: 0 0 1rem;
+  color: #f6efe4;
+  font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+  line-height: 1.25;
+  text-align: center;
+}
+
+.atelier-video__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid rgba(200, 163, 90, .55);
+  border-radius: .45rem;
+  box-shadow: 0 24px 58px rgba(0, 0, 0, .58);
+}
+
+.atelier-video__frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .atelier-video {
+    width: min(100%, 760px);
+    margin-inline: auto;
+  }
+}

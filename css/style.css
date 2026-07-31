@@ -737,8 +737,10 @@ body {
 .home-section-ornament + .partners-section { padding-top: clamp(2.75rem, 4vw, 3.75rem); }
 
 .manifesto {
-  background: var(--cream);
-  color: #1b1512;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(107, 23, 36, .18), transparent 38%),
+    var(--panel);
+  color: var(--cream);
 }
 
 .center-text { text-align: center; }
@@ -748,18 +750,23 @@ body {
   grid-template-columns: repeat(3,1fr);
   gap: 1px;
   margin-top: 3rem;
-  background: rgba(35,24,18,.18);
+  background: rgba(200, 163, 90, .2);
 }
 
 .manifesto-item {
   padding: clamp(2rem,5vw,4rem);
-  background: var(--cream);
+  background: #0b0909;
+  color: var(--cream);
 }
 
 .manifesto-item > span {
-  color: var(--wine);
+  color: var(--gold);
   font-size: .72rem;
   letter-spacing: .2em;
+}
+
+.manifesto-item p {
+  color: var(--muted);
 }
 
 .manifesto-item h2 {
@@ -855,45 +862,6 @@ body {
   width: 100%;
   height: auto;
   display: block;
-}
-
-.workshop-media {
-  min-width: 0;
-}
-
-.atelier-video {
-  width: 100%;
-  margin: 2rem auto 0;
-}
-
-.atelier-video__title {
-  margin: 0 0 1rem;
-  color: var(--cream);
-  font-size: clamp(.7rem, 2.4vw, 1.65rem);
-  line-height: 1.2;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.atelier-video__frame {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  aspect-ratio: 16 / 9;
-  background: #000;
-  border: 2px solid rgba(255,225,63,.7);
-  border-radius: 12px;
-  box-shadow:
-    0 18px 40px rgba(0,0,0,.55),
-    0 0 24px rgba(255,225,63,.12);
-}
-
-.atelier-video__frame iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
 }
 
 .workshop-stage {
@@ -1931,6 +1899,115 @@ body.campaign-open { overflow: hidden; }
   color: var(--piratages-yellow);
 }
 
+/* Match d’improvisation — galerie photographique */
+.improv-show-card {
+  margin-top: clamp(3rem, 7vw, 6rem);
+}
+
+@media (min-width: 901px) {
+  .improv-show-card {
+    grid-template-columns: minmax(0, 1.1fr) minmax(340px, .9fr);
+  }
+
+  .improv-copy {
+    padding: clamp(2rem, 4vw, 4.25rem);
+  }
+
+  .improv-show-card .improv-copy h2 {
+    font-size: clamp(1.65rem, 2.7vw, 3.15rem);
+  }
+}
+
+.improv-gallery {
+  position: relative;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(.8rem, 2vw, 1.4rem);
+  align-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow: hidden;
+  background: #090808;
+}
+
+.improv-photo {
+  display: block;
+  object-fit: cover;
+  border: 0;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, .68);
+  transition: transform .35s ease, filter .35s ease;
+}
+
+.improv-photo-main {
+  grid-column: 1 / -1;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: center;
+  justify-self: center;
+  transform: rotate(-1deg);
+}
+
+.improv-photo-secondary {
+  position: relative;
+  bottom: auto;
+  width: 90%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  background: #090808;
+  justify-self: center;
+}
+
+.improv-photo-left {
+  left: auto;
+  transform: rotate(-6deg);
+}
+
+.improv-photo-right {
+  right: auto;
+  transform: rotate(5deg);
+}
+
+.improv-gallery:hover .improv-photo-main {
+  transform: rotate(0deg) scale(1.012);
+}
+
+.improv-gallery:hover .improv-photo-left {
+  transform: rotate(-4deg) translateY(-4px);
+}
+
+.improv-gallery:hover .improv-photo-right {
+  transform: rotate(3deg) translateY(-4px);
+}
+
+.improv-copy h2 {
+  font-size: clamp(1.75rem, 4.2vw, 4.6rem);
+  line-height: .92;
+  margin-bottom: 1.5rem;
+  white-space: nowrap;
+}
+
+.shows-section-ornament {
+  margin: clamp(2rem, 4vw, 3.5rem) auto;
+}
+
+.improv-copy > p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.improv-facebook-button {
+  width: min(100%, 390px);
+  min-height: 62px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 @media (max-width: 700px), (orientation: portrait) and (max-width: 1000px) {
   .hero-stage {
     min-height: min(78svh, 720px);
@@ -1939,5 +2016,82 @@ body.campaign-open { overflow: hidden; }
   .page-hero {
     min-height: min(72svh, 660px);
     padding-bottom: 7rem !important;
+  }
+
+  .improv-gallery {
+    min-height: 0;
+  }
+
+  .improv-photo-main {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .improv-photo-secondary {
+    width: 90%;
+    height: auto;
+    bottom: auto;
+  }
+
+  .improv-photo-left {
+    left: auto;
+    transform: rotate(-3deg);
+  }
+
+  .improv-photo-right {
+    right: auto;
+    transform: rotate(3deg);
+  }
+
+  .improv-copy h2 {
+    font-size: clamp(1.1rem, 5vw, 2.45rem);
+    letter-spacing: -.025em;
+  }
+}
+
+@media (max-width: 480px) {
+  .improv-gallery {
+    grid-template-columns: 1fr;
+    padding: 1.1rem;
+  }
+
+  .improv-photo-main,
+  .improv-photo-secondary {
+    grid-column: 1;
+    justify-self: center;
+  }
+
+  .improv-photo-main {
+    width: 100%;
+  }
+
+  .improv-photo-secondary {
+    width: 92%;
+  }
+}
+
+/* =========================================================
+   LIVRAISON RC47 — LOGO VECTORIEL
+   ========================================================= */
+.brand-logo,
+.hero-stage .hero-logo,
+.footer-logo,
+.editorial-mark img,
+.troupe-emblem img,
+.contact-poster img {
+  height: auto;
+  object-fit: contain;
+  filter: invert(1) drop-shadow(0 12px 28px rgba(0, 0, 0, .72));
+}
+
+.brand-logo {
+  height: 58px;
+}
+
+@media (max-width: 620px) {
+  .brand-logo {
+    width: 44px;
+    height: 44px;
   }
 }
