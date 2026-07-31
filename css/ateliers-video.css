@@ -9,11 +9,14 @@
   margin-top: clamp(1.5rem, 3vw, 2.25rem);
 }
 
-.atelier-video__title {
+.workshop-media .atelier-video__title {
+  display: block;
+  width: 100%;
   margin: 0 0 1rem;
   color: #f6efe4;
-  font-size: clamp(.78rem, 2.2vw, 1.55rem);
+  font-size: clamp(.68rem, 1.75vw, 1.25rem);
   line-height: 1.25;
+  letter-spacing: -.02em;
   text-align: center;
   white-space: nowrap;
 }
