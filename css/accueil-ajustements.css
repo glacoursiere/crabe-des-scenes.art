@@ -1,5 +1,21 @@
 /* Ajustement isolé de la citation sur la page d’accueil. */
 
 .quote {
+  padding-top: 3rem;
+  padding-bottom: 1.75rem;
   font-size: clamp(1.35rem, 3.1vw, 2.4rem);
+}
+
+/* Deux boutons superposés de dimensions identiques. */
+.troupe-actions {
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+  width: max-content;
+  max-width: 100%;
+}
+
+.troupe-actions .home-action-button {
+  width: 100%;
+  min-width: 0;
 }

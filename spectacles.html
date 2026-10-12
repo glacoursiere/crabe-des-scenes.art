@@ -32,7 +32,50 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
-<link href="css/style.css?v=RC47" rel="stylesheet"/>
+<link href="css/style.css?v=RC50" rel="stylesheet"/>
+<style>
+.piratages-show-card .poster-copy { text-align: center; }
+.piratages-show-card .poster-copy > .button { align-self: center; }
+
+.improv-gallery .improv-photo-credit {
+  grid-column: 1 / -1;
+  margin: 1rem 0 0;
+  text-align: center;
+  font-size: .85rem;
+  color: var(--muted);
+}
+
+.piratages-show-card .residence-button { margin-top: 1rem; white-space: normal; }
+.piratages-show-card { padding-top: 1rem; }
+.piratages-show-card .poster-visual { align-self: center; justify-self: center; width: 100%; }
+.piratages-show-card .poster-copy { justify-content: flex-start; padding-top: 1rem; }
+.piratages-show-card .poster-copy h2 { margin-top: 0; }
+@media (min-width: 901px) {
+  .piratages-show-card { grid-template-columns: 1fr 1fr; }
+  .piratages-show-card .poster-copy { padding-top: 0; }
+}
+
+@media (min-width: 901px) {
+  .improv-copy { justify-content: flex-start; padding-top: clamp(1rem, 3vw, 2rem); }
+  .improv-gallery { align-content: start; }
+  .improv-copy h2 { margin-top: 0; }
+  .improv-copy h2 { text-align: center; white-space: normal; }
+  .improv-copy h2 > span { display: block; }
+}
+@media (max-width: 620px) {
+  .improv-show-card .improv-copy h2 {
+    font-size: clamp(1.65rem, 7vw, 2.7rem);
+    white-space: normal;
+    text-align: center;
+    line-height: 1.05;
+  }
+  .improv-copy h2 > span { display: block; }
+  .improv-date { text-align: center; }
+  .improv-date .improv-year,
+  .improv-date .improv-date-separator { display: none; }
+  .improv-date .improv-location { display: block; }
+}
+</style>
 </head>
 <body data-page="spectacles">
 <header class="site-header" id="site-header">
@@ -48,7 +91,6 @@
 <a data-page="accueil" href="index.html">Accueil</a>
 <a data-page="troupe" href="troupe.html">La Troupe</a>
 <a data-page="spectacles" href="spectacles.html">Spectacles</a>
-<a data-page="ateliers" href="ateliers.html">Ateliers</a>
 <a data-page="contact" href="contact.html">Contact</a>
 </nav>
 </div>
@@ -68,41 +110,36 @@
 </section>
 <section class="section shows-gallery">
 <div class="container">
-<article class="poster-card reveal">
-<a class="poster-visual poster-visual--full" href="projet.html">
-<img alt="Affiche du spectacle Piratages" src="images/piratage_represntations_v2.jpg"/>
+<article class="poster-card piratages-show-card reveal">
+<a class="poster-visual poster-visual--full" href="piratages.html">
+<img alt="Affiche du spectacle Piratages" src="images/Maquette-Piratage.png"/>
 </a>
 <div class="poster-copy">
-<p class="eyebrow">Création 2026</p>
 <h2>Piratage<span class="piratages-s">s</span></h2>
 <p class="poster-credit">Un texte de Cathie Belley et Bilbo Cyr</p>
 <p>Une intervention théâtrale qui explore notre rapport au territoire, aux ressources et à l’avenir collectif.</p>
-<dl>
-<div><dt>Lieu</dt><dd>Auberge Mowatt, Maria</dd></div>
-<div><dt>Format</dt><dd>Théâtre documentaire</dd></div>
-</dl>
-<a class="button primary" href="projet.html">Découvrir le spectacle</a>
-<div class="ticket-action">
-<a class="button reservation-button" href="https://forms.gle/5ujQ4daS9BFqkczr8" target="_blank" rel="noopener noreferrer">Réservez votre place pour Piratage<span class="piratages-s">s</span></a>
-</div>
+<a class="button primary" href="piratages.html">Découvrir Piratage<strong class="piratages-s">s</strong></a>
+<a class="button primary residence-button" href="piratage_maria.html">Résidence à Maria - 2026</a>
+<!-- Bouton conservé pour réutilisation ultérieure.
+<a class="button primary residence-button" href="residence_carleton.html"><span>Résidence technique à<br/>Carleton-sur-mer - 2027</span></a>
+-->
 </div>
 </article>
 <div aria-hidden="true" class="ornament shows-section-ornament reveal"><span>✦</span></div>
 <article class="poster-card improv-show-card reveal">
-<a class="improv-gallery" href="https://www.facebook.com/events/1041084705311022" target="_blank" rel="noopener noreferrer" aria-label="Voir l’événement Facebook du Match d’improvisation">
-<img class="improv-photo improv-photo-main" alt="Match d’improvisation devant le public au parc des Horizons" src="images/impro1.jpg"/>
-<img class="improv-photo improv-photo-secondary improv-photo-left" alt="Match d’improvisation au parc des Horizons avec le public" src="images/impro2.jpg" loading="lazy"/>
-<img class="improv-photo improv-photo-secondary improv-photo-right" alt="Deux improvisatrices en pleine performance" src="images/impro3.jpg" loading="lazy"/>
-</a>
+<div class="improv-gallery">
+<img class="improv-photo improv-photo-main" alt="Le groupe — match d’improvisation" src="images/impro-le-groupe.jpg"/>
+<img class="improv-photo improv-photo-secondary improv-photo-left" alt="Vicky et Dali — match d’improvisation" src="images/impro-vicky-et-dali.jpg" loading="lazy"/>
+<img class="improv-photo improv-photo-secondary improv-photo-right" alt="Cathie et Maude — match d’improvisation" src="images/impro-cathie-et-maude.jpg" loading="lazy"/>
+<img class="improv-photo improv-photo-secondary improv-photo-left" alt="Gabriel et Jonathan — match d’improvisation" src="images/impro-gabriel-et-jonathan.jpg" loading="lazy"/>
+<img class="improv-photo improv-photo-secondary improv-photo-right" alt="Louis — match d’improvisation" src="images/impro-louis.jpg" loading="lazy"/>
+<img class="improv-photo improv-photo-secondary improv-photo-left" alt="Dji — match d’improvisation" src="images/impro-dji.jpg" loading="lazy"/>
+<p class="improv-photo-credit">Crédit photos : Sophie Tremblay</p>
+</div>
 <div class="poster-copy improv-copy">
-<p class="eyebrow">10 août · 19 h · Carleton-sur-Mer</p>
-<h2>Match d’improvisation</h2>
-<p>Le crâbe des scènes joue avec les improvisateurs gaspésiens. Le match explorera notre thématique, certes, nous essaierons de nouvelles catégories, peut-être, y aura-t-il de nouveaux joueurs ? Ce qui est certain, c'est que cette rencontre n'est pas une première. Nous avons déjà joué sur cette patinoire, puis nous nous sommes rencontrés au Février Festif de Carleton là où nous avons subi une première raclée. L'heure est au retour de la situation, au plaisir dans la réunion. Merci aux joueurs et au public de participer.</p>
-<dl>
-<div><dt>Date</dt><dd>10 août, 19 h</dd></div>
-<div><dt>Lieu</dt><dd>Parc des Horizons<br/>499, boulevard Perron<br/>Carleton-sur-Mer (Québec) G0C 1J0</dd></div>
-</dl>
-<a class="button primary improv-facebook-button" href="https://www.facebook.com/events/1041084705311022" target="_blank" rel="noopener noreferrer">Voir l’événement Facebook</a>
+<h2><span>Match</span> <span>d’improvisation</span></h2>
+<p class="eyebrow improv-date"><span>10 août<span class="improv-year"> 2026</span></span><span class="improv-date-separator"> · </span><span class="improv-location">Carleton-sur-Mer</span></p>
+<p>Le Crâbe des scènes a joué avec les improvisateurs gaspésiens. Le match a exploré notre thématique, certes, mais nous a aussi permis d'essayer de nouvelles catégories, avec de nouveaux joueurs, comme Vivki Grenier et Dji Haché.  Cette sortie publique a été réussie et nous a remplis de superbes souvenirs avec les improvisateurs de la Baie-des-Chaleurs. Cette rencontre, qui n'était pas notre première, car nous avions déjà joué sur cette patinoire et nous nous sommes rencontrés au Février Festif de Carleton là où nous avions subi une raclée, n'a pas eu la même finalité.  Merci donc aux joueuses, aux joueurs ainsi qu'au public d'avoir participé en grand nombre.</p>
 </div>
 </article>
 <div class="future-show reveal">
@@ -125,6 +162,7 @@
 <a class="partner-card portrait reveal" href="https://coalitionavenirquebec.org/fr/blog/equipe/catherine-blouin/" target="_blank" rel="noopener noreferrer" aria-label="Consulter la page de Catherine Blouin"><img src="images/Catherine-Blouin.png" alt="Catherine Blouin, députée de Bonaventure"></a>
 <a class="partner-card reveal" href="https://histoiresdumonde.org/" target="_blank" rel="noopener noreferrer" aria-label="Visiter le site de La compagnie des Histoires du Monde"><img src="images/Logo-CdHdM.jpg" alt="La compagnie des Histoires du Monde"></a>
 <a class="partner-card reveal" href="https://theatreatourderole.com/" target="_blank" rel="noopener noreferrer" aria-label="Visiter le site du Théâtre À tour de rôle"><img src="images/logo_tour_de_role.png" alt="Théâtre À tour de rôle"></a>
+<a class="partner-card" href="https://www.facebook.com/boisjl" target="_blank" rel="noopener noreferrer" aria-label="Visiter la page Facebook de Bois JL"><img src="images/Logo_Bois_JL.jpg" alt="Bois JL"></a>
 </div>
 </div>
 </section></main>
@@ -137,7 +175,6 @@
 <nav aria-label="Navigation de pied de page">
 <a href="troupe.html">La Troupe</a>
 <a href="spectacles.html">Spectacles</a>
-<a href="ateliers.html">Ateliers</a>
 <a href="contact.html">Contact</a>
 </nav>
 <a class="footer-email" href="mailto:crabedesscenes@gmail.com" aria-label="Envoyer un courriel à Crabe des Scènes" title="crabedesscenes@gmail.com"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v14H3V5Zm2 2v.35l7 5.25 7-5.25V7H5Zm14 10V9.85l-7 5.25-7-5.25V17h14Z"/></svg></a><div aria-label="Réseaux sociaux" class="footer-socials">
@@ -147,5 +184,19 @@
 </div>
 </footer>
 <script src="js/script.js?v=RC38"></script>
+<script>
+(() => {
+  const card = document.querySelector('.improv-show-card');
+  const gallery = card.querySelector('.improv-gallery');
+  const copy = card.querySelector('.improv-copy');
+  const phone = window.matchMedia('(max-width: 620px)');
+  function placeGallery() {
+    if (phone.matches) copy.append(gallery);
+    else card.insertBefore(gallery, copy);
+  }
+  phone.addEventListener('change', placeGallery);
+  placeGallery();
+})();
+</script>
 </body>
 </html>
